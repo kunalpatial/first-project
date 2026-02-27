@@ -88,19 +88,20 @@ html, body {
 
   margin-right: 200px;
   text-align: start;
+}
 
-
-  h1 {
+ .hero-section-left h1 {
     font-weight: 600;
     font-size: 65px;
   }
 
-  .text-through {
+  
+.hero-section-left .text-through {
     font: 1em sans-serif;
 
   }
 
-}
+
 
 .hero-section-text {
   text-align: left;
@@ -109,12 +110,12 @@ html, body {
 
 }
 
-#form {
-  input {
+
+ #form input {
     border-radius: 50px;
      height: 65px;
   }
-}
+
 
 .icon {
   border-radius: 50px;
@@ -390,37 +391,60 @@ html, body {
 
 
 }
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  display: flex;
+  gap: 20px;
+}
+
+
+
 @media (max-width: 1200px) {
 
   .navbar {
-    margin: 100px;
+    margin: 40px;
   }
 
   .hero-section-left {
-    margin-right: 100px;
+    margin-right: 40px;
   }
 
+  .edupath {
+    font-size: clamp(60px, 8vw, 90px);
+  }
+
+  .mySwiper,
   .video {
-    margin-left: 300px;
+    display: none;
   }
-
 }
 
-/* ---------- Tablet ---------- */
+
 
 @media (max-width: 992px) {
 
   .navbar {
-    margin: 50px;
+    margin: 20px;
   }
 
   .navbar-logo {
-    margin-left: 0;
     text-align: center;
+    margin-left: 0;
+  }
+
+  .section {
+    flex-direction: column;
   }
 
   .hero-section {
     margin-top: 0;
+    text-align: center;
   }
 
   .hero-section-left {
@@ -429,107 +453,134 @@ html, body {
   }
 
   .hero-section-left h1 {
-    font-size: 40px;
+    font-size: clamp(28px, 5vw, 40px);
   }
 
-  .hero-section-text {
-    text-align: center;
-  }
-
+  .hero-section-text,
   .right-text {
     text-align: center;
   }
 
   .edupath {
-    font-size: 80px;
-    margin-left: 20px;
-  }
-
-  .video {
-    margin-left: 0;
-    margin-bottom: 150px;
-  }
-
-}
-
-/* ---------- Mobile ---------- */
-
-@media (max-width: 768px) {
-
-  .navbar {
-    margin: 20px;
-  }
-
-  .hero-section-left h1 {
-    font-size: 30px;
-  }
-
-  .hero-section-text {
-    width: 100%;
-  }
-
-  .right-text {
-    width: 100%;
-  }
-
-  .section {
-    flex-direction: column;
-  }
-
-  .edupath {
-    font-size: 50px;
+    font-size: clamp(50px, 10vw, 80px);
+    margin: 20px 0;
     text-align: center;
-    margin-left: 0;
   }
 
-  
-  .video {
-    margin: 20px auto;
-    width: 90%;
-  }
-
-  .video-container {
-    position: relative !important;
-    top: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-
-  .video-container img {
-    width: 100%;
+  .card-section {
     height: auto;
   }
 
-  .play-button {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .mySwiper,
+  .video {
+    display: none;
   }
 }
-  
-  
-  
 
 
-/* ---------- Extra Small ---------- */
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 
-  #box {
-    width: 150px;
-    height: 50px;
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
   }
 
-  #read-more {
-    height: 50px;
+  .navbar {
+    margin: 10px;
+  }
+
+  .hero-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-section-left {
+    margin: 0;
+  }
+
+  .hero-section-left h1 {
+    font-size: clamp(24px, 6vw, 32px);
+    line-height: 1.3;
+  }
+
+  .hero-section-text {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #form input {
+    width: 100%;
   }
 
   .icon {
-    padding: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .edupath {
+    font-size: clamp(35px, 12vw, 60px);
+  }
+
+  .footer .row,
+  .paragraph-text,
+  .check-box {
+    text-align: center;
+  }
+
+  .facebook ul {
+    justify-content: center;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+
+  .hero-section-left h1 {
+    font-size: 22px;
+  }
+
+  .hero-section-text {
+    font-size: 13px;
+  }
+
+  #box,
+  #read-more {
+    width: 100%;
+    height: 45px;
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 320px) {
+
+  .hero-section-left h1 {
     font-size: 18px;
   }
 
+  .hero-section-text {
+    font-size: 12px;
+  }
+
+  .edupath {
+    font-size: 28px;
+  }
+
+  .icon {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
 }
